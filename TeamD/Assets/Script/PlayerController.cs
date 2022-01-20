@@ -36,6 +36,15 @@ public class PlayerController : MonoBehaviour
         CheckGround();
         //　移動速度の計算
         Move();
+
+        if (Input.GetKey(KeyCode.F))
+        {
+            animator.SetBool("yasumu", true);
+        }
+        else
+        {
+            animator.SetBool("yasumu", false);
+        }
     }
     //　地面のチェック
     private void CheckGround()
@@ -111,11 +120,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag =="Item")
-        {
-            Destroy(other.gameObject);
-        }
+        //if(other.gameObject.tag =="Item")
+        //{
+        //    Destroy(other.gameObject);
+        //}
     }
 }
