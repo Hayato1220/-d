@@ -110,4 +110,12 @@ public class PlayerController : MonoBehaviour
             rigidBody.MovePosition(rigidBody.position + velocity * Time.fixedDeltaTime);
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag =="Item")
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
