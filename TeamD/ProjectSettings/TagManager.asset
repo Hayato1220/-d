@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fire
   - Item
+  - Boulder
+  - kaihuku
   layers:
   - Default
   - TransparentFX

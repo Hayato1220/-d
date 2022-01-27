@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         //　移動速度の計算
         Move();
 
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetButton("pad"))
         {
             animator.SetBool("yasumu", true);
         }
