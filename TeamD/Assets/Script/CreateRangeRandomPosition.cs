@@ -23,7 +23,7 @@ public class CreateRangeRandomPosition : MonoBehaviour
         // 前フレームからの時間を加算していく
         time = time + Time.deltaTime;
 
-        // 約1秒置きにランダムに生成されるようにする。
+        // 約5秒置きにランダムに生成されるようにする。
         if (time > 1.0f)
         {
             // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
@@ -39,5 +39,12 @@ public class CreateRangeRandomPosition : MonoBehaviour
             // 経過時間リセット
             time = 0f;
         }
+        int count = GameObject.FindGameObjectsWithTag("Boulder").Length;
+        if (count > 10)
+        {
+            time = 0f;
+        }
+ 
+
     }
 }
