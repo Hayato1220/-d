@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("pad"))
         {
             animator.SetBool("yasumu", true);
+            
         }
         else
         {
